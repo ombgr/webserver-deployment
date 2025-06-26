@@ -31,7 +31,7 @@
 </nav>
 
 <div class="container main-frame text-center">
-    <h1>Welcome to Bank ABC</h1>
+    <h1>Welcome to  ABC International Bank</h1>
     <p>Your trusted partner in financial growth.</p>
     <img src="https://via.placeholder.com/600x300" class="img-fluid mt-4" alt="Bank Image">
 </div>

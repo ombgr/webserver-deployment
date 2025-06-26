@@ -18,9 +18,11 @@ stages {
 stage('Build') {
     steps{
         script {
-            withMaven (maven: 'M11')
+            withMaven (maven: 'M11')(
+                sh 'mvn clean install package'
+            )
         }
-            sh 'mvn clean install package'
+            
             }
             
         }

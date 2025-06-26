@@ -31,7 +31,7 @@
             color: #333;
         }
         .btn-custom {
-            background-color: #007bff;
+            background-color: #00070e;
             color: white;
             padding: 12px 25px;
             font-size: 18px;
@@ -64,7 +64,7 @@
 
 <div class="container">
     <div class="main-frame text-center">
-        <h1>Welcome to ABC International Bank</h1>
+        <h1>Welcome to ABC International Bank Pvt ltd</h1>
         <p>Your trusted partner in financial growth and prosperity.</p>
         <img src="https://via.placeholder.com/700x350" class="img-fluid rounded shadow-sm mb-4" alt="Bank Image">
         <div>

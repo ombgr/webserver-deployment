@@ -16,7 +16,7 @@
     </nav>
 
     <div class="container text-center mt-5">
-        <h1>Welcome to Bank ABC</h1>
+        <h1>Welcome to  ABC International Bank</h1>
         <p>Your trusted partner in banking</p>
         <a href="login.jsp" class="btn btn-success mt-3">Login to Your Account</a>
     </div>

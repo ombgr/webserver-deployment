@@ -7,8 +7,8 @@ pipeline {
 stages {
     stage('Git SCM Checkout') {
         steps{
-            git branch: 'main'
-            credentialsId : glpat-_iZhL3dWvohPi2CNZyDc
+            git branch: 'main',
+            credentialsId : 'glpat-_iZhL3dWvohPi2CNZyDc',
             url : https://github.com/ombgr/webserver-deployment.git
         }
 

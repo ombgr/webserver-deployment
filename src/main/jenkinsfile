@@ -1,0 +1,73 @@
+pipeline{
+    agent any
+    tool
+    {
+        maven 'M11'
+    }
+    environment {
+        Branch = "main"
+    }
+
+    stages{
+        stage('Commit/Checkout'){
+            steps {
+                // git commands
+            }
+        }
+        stage('Build'){
+            stapes{
+                // Steps command mvn clean install package
+            }
+        }
+        stage('test'){
+            steps{
+                // Run Maven test
+            }
+        }
+
+        stage('Parallel testing'){
+            Parallel{
+                stage('Unit Testing'){
+                    steps{
+                        //
+                    }
+
+                }
+                stage('Integration Tesing'){
+                    steps{
+                        //
+                    }
+
+                }
+            }
+        }
+        stage('Deploy'){
+            steps{
+                // deploy commands
+            }
+
+        }
+        stage('Error Hanfling'){
+            steps{
+                script{
+                    try{
+                        sh exit 1
+                    } catch(Exception as e){
+                        echo "e"
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            // test results publish
+        }
+        success {
+            // Ok
+        }
+        failure{
+            // Mistake
+        }
+    }
+}

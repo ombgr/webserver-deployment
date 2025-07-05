@@ -1,151 +1,85 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ABC International Bank - Home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>ABC Bank - Welcome to the Hood</title>
     <style>
         body {
-            background: linear-gradient(to right, #e0f7fa, #ffffff);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
-        .main-frame {
-            border-radius: 20px;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            margin-top: 60px;
-            margin-bottom: 40px;
-        }
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        h1, h2 {
-            color: #007bff;
-            font-weight: 700;
-        }
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-        .btn-custom {
-            background-color: #00070e;
+        header {
+            background-color: #003366;
             color: white;
-            padding: 12px 25px;
-            font-size: 18px;
-            border-radius: 30px;
-            transition: 0.3s;
+            padding: 20px;
+            text-align: center;
         }
-        .btn-custom:hover {
-            background-color: #0056b3;
+        nav {
+            background-color: #0059b3;
+            padding: 10px;
+            text-align: center;
         }
-        .nav-link {
-            font-size: 18px;
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        #map {
-            height: 400px;
-            width: 100%;
-            border-radius: 15px;
-            margin-top: 20px;
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .login-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         footer {
-            background-color: #007bff;
+            background-color: #003366;
             color: white;
-            padding: 20px 0;
-        }
-        footer a {
-            color: #e0f7fa;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>ABC Bank</h1>
+        <p>Your Trusted Financial Partner, Best in Asia!!!</p>
+    </header>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.jsp">ABC Bank</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="about.jsp">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.jsp">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav>
+        <a href="index.jsp">Home</a>
+        <a href="accounts.jsp">Accounts</a>
+        <a href="services.jsp">Services</a>
+        <a href="contact.jsp">Contact</a>
+    </nav>
 
-<div class="container">
-    <div class="main-frame text-center">
-        <h1>Welcome to ABC International Bank Pvt Ltd</h1>
-        <p>Your trusted partner in financial growth and prosperity.</p>
-        <img src="https://via.placeholder.com/700x350" class="img-fluid rounded shadow-sm mb-4" alt="Bank Image">
-        <div>
-            <a href="services.jsp" class="btn btn-custom mr-3">Explore Services</a>
-            <a href="contact.jsp" class="btn btn-outline-primary btn-lg">Contact Us</a>
+    <section>
+        <h2>Welcome to ABC Bank</h2>
+        <p>Manage your finances easily and securely with our online banking services.</p>
+        
+        <div class="login-box">
+            <h3>Customer Login</h3>
+            <form action="login.jsp" method="post">
+                <input type="text" name="username" placeholder="Username" required><br><br>
+                <input type="password" name="password" placeholder="Password" required><br><br>
+                <input type="submit" value="Login">
+            </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Why Choose Us Section -->
-    <div class="main-frame">
-        <h2>Why Choose ABC Bank?</h2>
-        <p>We offer secure, transparent, and customer-friendly banking services that put your needs first.</p>
-        <ul class="list-group list-group-flush text-left">
-            <li class="list-group-item">✔ 24x7 Online Banking & Mobile App</li>
-            <li class="list-group-item">✔ Personalized Financial Planning</li>
-            <li class="list-group-item">✔ Wide Range of Loans & Credit Services</li>
-            <li class="list-group-item">✔ Strong Branch Network across India</li>
-        </ul>
-    </div>
-
-    <!-- Branch Locations Map -->
-    <div class="main-frame">
-        <h2>Our Branch Locations</h2>
-        <p>Visit our branches in Pune and Mumbai:</p>
-        <div id="map"></div>
-    </div>
-</div>
-
-<!-- Footer -->
-<footer class="text-center">
-    <div class="container">
-        <p>&copy; 2025 ABC International Bank Pvt Ltd | <a href="privacy.jsp">Privacy Policy</a> | <a href="terms.jsp">Terms of Service</a></p>
-        <p>Contact us: info@abcbank.com | +91-123-456-7890</p>
-    </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Google Maps API -->
-<script>
-    function initMap() {
-        const pune = { lat: 18.5204, lng: 73.8567 };
-        const mumbai = { lat: 19.0760, lng: 72.8777 };
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 6,
-            center: pune,
-        });
-        const markerPune = new google.maps.Marker({
-            position: pune,
-            map: map,
-            title: "Pune Branch"
-        });
-        const markerMumbai = new google.maps.Marker({
-            position: mumbai,
-            map: map,
-            title: "Mumbai Branch"
-        });
-    }
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
-</script>
-
+    <footer>
+        <p>&copy; 2025 ABC Bank. All rights reserved.</p>
+    </footer>
 </body>
 </html>

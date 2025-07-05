@@ -62,6 +62,9 @@ pipeline{
     post {
         always {
             // test results publish
+            mail to : ombgr008@gmail.com
+            subject : Test cases
+            body :  rfjdskcikdvlm
         }
         success {
             // Ok
